@@ -19,8 +19,8 @@ html, body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px;
-  color: white;
+  width: 150px; /* Set the width of the loading image */
+  height: auto; /* Set the height of the loading image */
   opacity: 1; /* Start fully visible */
   transition: opacity 1s ease; /* Fade transition */
 }
