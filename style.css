@@ -23,6 +23,7 @@ html, body{
   height: auto; /* Set the height of the loading image */
   opacity: 1; /* Start fully visible */
   transition: opacity 1s ease; /* Fade transition */
+  background-color:black;
 }
 
 body{
