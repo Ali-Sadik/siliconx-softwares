@@ -23,7 +23,6 @@ html, body{
   height: auto; /* Set the height of the loading image */
   opacity: 1; /* Start fully visible */
   transition: opacity 1s ease; /* Fade transition */
-  background-color:black;
 }
 
 body{
@@ -31,6 +30,7 @@ background-image: url("black.jpg");
   background-size:cover;
   background-repeat:no-repeat;
   background-position: center;
+  background-color:black;
 }
 
 /* colors 8a3aff, 6f79ff, 3a9fff black-> 1f4568  grey->8198ae*/
