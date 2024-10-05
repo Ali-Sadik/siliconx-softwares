@@ -11,28 +11,31 @@ html, body{
 }
 
 .content {
-  display: none; /* Hide content until the image is loaded */
+  opacity: 0;
+  visibility: hidden; /* Initially hidden */
+  transition: opacity 2s ease; /* Smooth fade-in effect */
 }
 
+/* Loading animation */
 .loading {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 150px; /* Set the width of the loading image */
-  height: auto; /* Set the height of the loading image */
+  width: 50px;
+  height: auto;
   opacity: 1; /* Start fully visible */
-  transition: opacity 1s ease; /* Fade transition */
+  transition: opacity 0.1s ease; /* Fade out effect for loading */
 }
 
-body{
-background-image: url("black.jpg");
-  background-size:cover;
-  background-repeat:no-repeat;
+/* Body background settings */
+body {
+  background-image: url("black.jpg");
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  background-color:black;
 }
-
 /* colors 8a3aff, 6f79ff, 3a9fff black-> 1f4568  grey->8198ae*/
 .sect{
   padding: 90px 0;
@@ -1061,4 +1064,69 @@ margin-top: 0;
 }
  
 
+}
+
+
+@layer animation.reveal {
+  .up {
+    opacity: 1;
+  }
+  .reveal-down {
+    animation: fade-in 1s ease forwards,
+      slide-down 1.5s cubic-bezier(0, 0, 0.1, 1) forwards;
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-down {
+    from {
+      transform: translateY(100px);
+    }
+  }
+}
+
+@layer animation.reveal {
+  .left-an {
+    opacity: 1;
+  }
+  .reveal-left {
+    animation: slide-left 1.5s cubic-bezier(0, 0, 0.1, 1) forwards;
+  }
+  @keyframes slide-left {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+@layer animation.reveal {
+  .right-an {
+    opacity: 1;
+  }
+  .reveal-right {
+    animation: fade-in 1s ease forwards,
+      slide-right 1.5s cubic-bezier(0, 0, 0.1, 1) forwards;
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-right {
+    from {
+      transform: translateX(50%);
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
 }
