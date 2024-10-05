@@ -993,11 +993,27 @@ body {
   }
 }
 
-.footer__img {
+.footer__img{
   width: 120px;
   height: auto;
 }
 
+
+.footer__content {
+  display: flex;           /* Use Flexbox for alignment */
+  align-items: center;    /* Center align items vertically */
+}
+
+.footer__title {
+  white-space: nowrap;    /* Prevent text from wrapping to a new line */
+  margin: 0;              /* Remove default margins */
+}
+
+.footer__img {
+  margin-right: 10px;     /* Add space between the image and title */
+  max-width: 100%;        /* Ensure the image is responsive */
+  height: auto;           /* Maintain aspect ratio */
+}
 @media screen and (max-width: 480px) {
   .price-box {
     padding: 0px 20px;
