@@ -67,3 +67,121 @@ $("#myCarousel").carousel({
       content.style.opacity = '1'; // Trigger fade-in
     }, 50); // Match the transition duration of the loading opacity (1s)
   });
+
+
+  document.querySelector('.btn.btn--width').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    document.querySelector('.sect.sect--padding-bottom').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+
+  document.querySelector('#blog').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    document.querySelector('#blog-section').scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+
+
+// Event listener for the 'Services' button
+// Event listener for the 'Services' button
+document.querySelector('#service').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent default behavior of the anchor tag
+
+  // Smoothly scroll to the services section
+  document.querySelector('#services-section').scrollIntoView({
+      behavior: 'smooth'
+  });
+
+  // Collapse the navigation menu
+  const navbar = document.querySelector('#navbar');
+  navbar.classList.add('collapse'); // Add collapse class to hide the menu
+});
+
+// Optional: Toggle button to show/hide the navbar
+document.querySelector('.header__link').addEventListener('click', function() {
+  const navbar = document.querySelector('#navbar');
+  navbar.classList.toggle('collapse'); // Toggle collapse class
+});
+
+
+   // Function to show progress bar for 1 second
+   function showProgressBar(callback) {
+    // Show progress bar
+    document.getElementById("progress-bar").style.display = "block";
+
+    // Hide progress bar after 1 second
+    setTimeout(function () {
+      document.getElementById("progress-bar").style.display = "none";
+      if (callback) {
+        callback(); // Execute callback function
+      }
+    }, 1000);
+  }
+  window.addEventListener("load", function () {
+    showProgressBar(); // Show progress bar on page load
+  });
+
+  document
+        .getElementById("post4")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "https://www.facebook.com/share/p/zU8UArZ4V9h7i25H/"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+
+        document
+        .getElementById("post3")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "https://www.linkedin.com/posts/sadik047_stl-containers-activity-7243314487301177344-ikuQ?utm_source=share&utm_medium=member_desktop"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+
+        document
+        .getElementById("post2")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "https://www.facebook.com/share/p/rbnLrbEEninRJ4gZ/"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+
+        document
+        .getElementById("post1")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "https://www.facebook.com/share/p/UcikhcrjNHTwF4ij/"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+
+        document
+        .getElementById("connect")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "contact.html"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+
+        document
+        .getElementById("contact-us")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "contact.html"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });
+
+        document
+        .getElementById("home")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default link behavior
+          showProgressBar(function () {
+            window.location.href = "index.html"; // Redirect after progress bar animation completes
+          }); // Show progress bar when link is clicked
+        });

@@ -4,6 +4,7 @@
 
 /*Reset*/
 html, body{
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   font-family: 'Satoshi', sans-serif;
@@ -14,6 +15,10 @@ html, body{
   opacity: 0;
   visibility: hidden; /* Initially hidden */
   transition: opacity 2s ease; /* Smooth fade-in effect */
+}
+
+.collapse {
+  display: none; /* Hide the navigation menu */
 }
 
 /* Loading animation */
@@ -242,7 +247,7 @@ body {
 .btn {
   background-color: #08c7d4;
   border-radius: 32px;
-  padding: 20px 100px;
+  padding: 10px 100px;
   color: black;
   box-shadow: 0px 18px 13px -6px rgba(0, 0, 0, 0.2);
   transition: all 0.4s;
@@ -624,23 +629,28 @@ filter: drop-shadow(0px 7px 4px rgba(0,0,0,.2));
 }
 
 .article-pre__img--first{
-   background-image: url(program.png);
+   background-image: url(iphone.png);
 }
 
 .article-pre__img--second{
-  background-image: url(trips\ \(2\).png);  
-}
-
-.article-pre__img--third{
   background-image: url(DSA.png);  
 }
 
+.article-pre__img--third{
+  background-image: url(program.png);  
+}
+
 .article-pre__img--fourth{
-  background-image: url(brand\ \(2\).png);  
+  background-image: url(kuet\ trips.png);  
 }
 
 .article-pre:hover .article-pre__img {
   box-shadow: 0px 10px 13px 4px rgba(0, 0, 0,0.2);
+  opacity: 48%;
+}
+
+.article-pre:hover .article-pre__title {
+  color: #08c7d4;
 }
 
 .article-pre:hover {
@@ -662,6 +672,7 @@ font-size: 20px;
 color: white;
 margin: 0;
 padding: 15px 25px;
+transition: color 0.4s ease;
 }
 
 .article-pre__arrow--purple{
@@ -1130,3 +1141,29 @@ margin-top: 0;
     }
   }
 }
+
+#progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  z-index: 9999;
+}
+
+#progress-bar {
+  height: 4px;
+  background: linear-gradient(to right, #0b7279, #08c7d4);
+  width: 0;
+  animation: progressBarAnimation 1s forwards;
+}
+@keyframes progressBarAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
