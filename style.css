@@ -808,7 +808,7 @@ left: 20%;
 
 
 .footer{
- background-color: #0a0a0a; 
+ background-color: black; 
   padding: 40px 0; 
 }
 
@@ -833,9 +833,11 @@ vertical-align: middle;
 }
 
 .footer__social-l {
+  
     margin-left: 15px;
     vertical-align: middle;
 }
+
 
 @media screen and (max-width:1024px){
   .collapse{
@@ -956,6 +958,24 @@ vertical-align: middle;
   width: 120px;
   height: auto;
 }
+
+
+.footer__content {
+  display: flex;           /* Use Flexbox for alignment */
+  align-items: center;    /* Center align items vertically */
+}
+
+.footer__title {
+  white-space: nowrap;    /* Prevent text from wrapping to a new line */
+  margin: 0;              /* Remove default margins */
+}
+
+.footer__img {
+  margin-right: 10px;     /* Add space between the image and title */
+  max-width: 100%;        /* Ensure the image is responsive */
+  height: auto;           /* Maintain aspect ratio */
+}
+
 
 
 @media screen and (max-width:480px){
