@@ -913,6 +913,7 @@ vertical-align: middle;
 @media screen and (max-width:767px){
   .footer {
     padding: 25px 0;
+    margin-left: 64px;
   }
   .price-box {
     padding: 0px 35px;
