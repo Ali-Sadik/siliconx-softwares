@@ -175,6 +175,7 @@ body {
   color: white;
   font-weight: 300;
   letter-spacing: 0;
+  transition: color 0.4s ease;
 }
 .member-box__wrap:hover .member-box__people{
   color: #08c7d4;
