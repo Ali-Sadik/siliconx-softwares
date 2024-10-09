@@ -94,3 +94,13 @@ function addRevealEffect(elements, animationClass, customClass = null) {
               window.location.href = "index.html"; // Redirect after progress bar animation completes
             }); // Show progress bar when link is clicked
           });
+
+
+          document
+          .getElementById("logo")
+          .addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link behavior
+            showProgressBar(function () {
+              window.location.href = "index.html"; // Redirect after progress bar animation completes
+            }); // Show progress bar when link is clicked
+          });
