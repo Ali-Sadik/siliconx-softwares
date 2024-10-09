@@ -172,9 +172,12 @@ body {
 }
 .member-box__people {
   font-size: 12px;
-  color: #08c7d4;
+  color: white;
   font-weight: 300;
   letter-spacing: 0;
+}
+.member-box__wrap:hover .member-box__people{
+  color: #08c7d4;
 }
 .member-box__feat {
   user-select: none;
