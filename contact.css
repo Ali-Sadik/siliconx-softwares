@@ -127,74 +127,74 @@ body {
 }
 
 .price-box--purple2 .price-box__img {
-  background-image: url("charka\ light.jpg");
+  background-image: url("charka\ light.webp");
 }
 .price-box--purple2:hover .price-box__img {
-  background-image: url("charka.jpg"); /* New image URL */
+  background-image: url("charka.webp"); /* New image URL */
 }
 
 .price-box--purple3 .price-box__img {
-  background-image: url("debraj\ ligh.jpg");
+  background-image: url("debraj\ light.webp");
 }
 .price-box--purple3:hover .price-box__img {
-  background-image: url("debraj.jpg"); /* New image URL */
+  background-image: url("debraj.webp"); /* New image URL */
 }
 .price-box--purple4 .price-box__img {
-  background-image: url("Ramiya.jpg");
+  background-image: url("Ramiya.webp");
 }
 .price-box--purple4:hover .price-box__img {
-  background-image: url("ramiya\ original.jpg");
+  background-image: url("ramiya\ original.webp");
 }
 .price-box--purple5 .price-box__img {
-  background-image: url("eesa\ light.jpg");
+  background-image: url("eesa\ light.webp");
 }
 .price-box--purple5:hover .price-box__img {
-  background-image: url("eesa.jpg");
+  background-image: url("eesa.webp");
 }
 
 .price-box--purple6 .price-box__img {
-  background-image: url("akib.jpg");
+  background-image: url("akib.webp");
 }
 .price-box--purple6:hover .price-box__img {
-  background-image: url("Akib\ light.jpg");
+  background-image: url("Akib\ light.webp");
 }
 .price-box--purple7 .price-box__img {
-  background-image: url("sinan\ light.jpg");
+  background-image: url("sinan\ light.webp");
 }
 .price-box--purple7:hover .price-box__img {
-  background-image: url("sinan.jpg");
+  background-image: url("sinan.webp");
 }
 .price-box--purple8 .price-box__img {
-    background-image: url("labib\ light.jpg");
+    background-image: url("labib\ light.webp");
   }
   .price-box--purple8:hover .price-box__img {
-    background-image: url("labib.jpg");
+    background-image: url("labib.webp");
   }
 
   .price-box--purple9 .price-box__img {
-    background-image: url("maliha\ light.jpg");
+    background-image: url("maliha\ light.webp");
   }
   .price-box--purple9:hover .price-box__img {
-    background-image: url("maliha.jpg");
+    background-image: url("maliha.webp");
   }
 
   .price-box--purple10 .price-box__img {
-    background-image: url("tabib\ loght.jpg");
+    background-image: url("tabib\ loght.webp");
   }
   .price-box--purple10:hover .price-box__img {
-    background-image: url("tabib.jpg");
+    background-image: url("tabib.webp");
   }
   .price-box--purple11 .price-box__img {
-    background-image: url("tisha\ light.jpg");
+    background-image: url("tisha\ light.webp");
   }
   .price-box--purple11:hover .price-box__img {
-    background-image: url("tisha.jpg");
+    background-image: url("tisha.webp");
   }
   .price-box--purple12 .price-box__img {
-    background-image: url("mahi\ light.jpg");
+    background-image: url("mahi\ light.webp");
   }
   .price-box--purple12:hover .price-box__img {
-    background-image: url("mahi.jpg");
+    background-image: url("mahi.webp");
   }
 .price-box__title {
   color: white;
@@ -585,6 +585,7 @@ body {
   vertical-align: middle;
   width: 120px;
   height: auto;
+  cursor: pointer;
 }
 
 .header__logo,
