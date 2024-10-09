@@ -120,10 +120,10 @@ body {
 }
 
 .price-box--purple .price-box__img {
-  background-image: url("me\ light.jpg");
+  background-image: url("me\ light.webp");
 }
 .price-box--purple:hover .price-box__img {
-  background-image: url("me.jpg"); /* New image URL */
+  background-image: url("me.webp"); /* New image URL */
 }
 
 .price-box--purple2 .price-box__img {
