@@ -53,7 +53,7 @@ $("#myCarousel").carousel({
   }
 
   // Preload the image and then show the content with smooth transitions
-  preloadBackgroundImage("black.jpg").then(() => {
+  preloadBackgroundImage("public/black.jpg").then(() => {
     // Fade out the loading image
     document.querySelector('.loading').style.opacity = '0';
 
