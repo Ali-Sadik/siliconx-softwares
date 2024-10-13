@@ -413,7 +413,7 @@ body {
   }
   .header {
     padding: 30px 25px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
   }
   .header {
