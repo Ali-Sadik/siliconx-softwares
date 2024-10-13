@@ -38,69 +38,89 @@ if (window.innerWidth >= 768) {
   addRevealEffect(rightSectionElements, "reveal-right", "right-an");
 }
 
-
 $("#myCarousel").carousel({
-  interval: false
+  interval: false,
 });
 
-  // Function to preload the background image
-  function preloadBackgroundImage(url) {
-    return new Promise((resolve) => {
-      const img = new Image();
-      img.src = url;
-      img.onload = () => resolve();
-    });
-  }
+// Function to preload a single image
+function preloadBackgroundImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.src = url;
+    img.onload = resolve;
+    img.onerror = reject;
+  });
+}
 
-  // Preload the image and then show the content with smooth transitions
-  preloadBackgroundImage("public/black.jpg").then(() => {
+// Function to preload multiple images in parallel
+function preloadBackgroundImages(urls) {
+  return Promise.all(urls.map(preloadBackgroundImage));
+}
+
+// Preload multiple images and show content with smooth transitions
+const imagePaths = [
+  "public/black.jpg",
+  "public/akib.webp",
+  "public/charka.webp",
+  "public/debraj.webp",
+  "public/eesa.webp",
+  "public/labib.webp",
+  "public/mahi.webp",
+  "public/maliha.webp",
+  "public/me.webp",
+  "public/ramiya original.webp",
+  "public/sinan.webp",
+  "public/tabib.webp",
+  "public/tisha.webp",
+];
+
+preloadBackgroundImages(imagePaths)
+  .then(() => {
     // Fade out the loading image
-    document.querySelector('.loading').style.opacity = '0';
+    const loadingElement = document.querySelector(".loading");
+    loadingElement.style.opacity = "0";
 
-    // After loading image fades out, remove it and show content
+    // After the fade-out, hide the loading element and show the content
     setTimeout(() => {
-      document.querySelector('.loading').style.display = 'none';
-      
+      loadingElement.style.display = "none";
+
       // Fade in the content
-      const content = document.querySelector('.content');
-      content.style.visibility = 'visible';
-      content.style.opacity = '1'; // Trigger fade-in
-    }, 50); // Match the transition duration of the loading opacity (1s)
+      const content = document.querySelector(".content");
+      content.style.visibility = "visible";
+      content.style.opacity = "1"; // Trigger fade-in
+    }, 50); // Adjust timeout to match your transition duration
+  })
+  .catch((error) => {
+    console.error("Error loading images:", error);
   });
 
+// Function to show progress bar for 1 second
+function showProgressBar(callback) {
+  // Show progress bar
+  document.getElementById("progress-bar").style.display = "block";
 
-   // Function to show progress bar for 1 second
-   function showProgressBar(callback) {
-    // Show progress bar
-    document.getElementById("progress-bar").style.display = "block";
+  // Hide progress bar after 1 second
+  setTimeout(function () {
+    document.getElementById("progress-bar").style.display = "none";
+    if (callback) {
+      callback(); // Execute callback function
+    }
+  }, 1000);
+}
+window.addEventListener("load", function () {
+  showProgressBar(); // Show progress bar on page load
+});
 
-    // Hide progress bar after 1 second
-    setTimeout(function () {
-      document.getElementById("progress-bar").style.display = "none";
-      if (callback) {
-        callback(); // Execute callback function
-      }
-    }, 1000);
-  }
-  window.addEventListener("load", function () {
-    showProgressBar(); // Show progress bar on page load
-  });
+document.getElementById("home").addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default link behavior
+  showProgressBar(function () {
+    window.location.href = "index.html"; // Redirect after progress bar animation completes
+  }); // Show progress bar when link is clicked
+});
 
-  document
-        .getElementById("home")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
-          showProgressBar(function () {
-            window.location.href = "index.html"; // Redirect after progress bar animation completes
-          }); // Show progress bar when link is clicked
-        });
-
-
-        document
-        .getElementById("logo")
-        .addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
-          showProgressBar(function () {
-            window.location.href = "index.html"; // Redirect after progress bar animation completes
-          }); // Show progress bar when link is clicked
-        });
+document.getElementById("logo").addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent default link behavior
+  showProgressBar(function () {
+    window.location.href = "index.html"; // Redirect after progress bar animation completes
+  }); // Show progress bar when link is clicked
+});
