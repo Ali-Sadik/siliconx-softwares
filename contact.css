@@ -430,6 +430,10 @@ body {
     padding: 0 35px;
     margin-bottom: 50px;
   }
+  .header {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+  }
 }
 .footer__img {
   width: 120px;
