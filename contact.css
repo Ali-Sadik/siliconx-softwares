@@ -397,7 +397,7 @@ body {
   .header__el {
     display: block;
     padding: 12px 20px;
-    border-top: 1px solid #000;
+    border-top: none;
   }
   .header .btn--white,
   .header .btn--white:hover {
